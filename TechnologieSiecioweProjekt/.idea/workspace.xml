@@ -1,30 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="" />
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_12_8_1_jre8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/IConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/IData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/IDeleteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/IInsertData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/IUpdateData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/MainClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/MainServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/ConfigD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/RequestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/DataRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/DataTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/SQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechnologieSiecioweProjekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TechnologieSiecioweProjekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2nea3S8LtttJMJMGg6TWfiK0hJm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MainClient.executor": "Run",
+    "Application.MainServer.executor": "Run",
+    "Application.TestMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rojda/Downloads/jars/mssql-jdbc-12.8.1.jre8.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -44,6 +98,11 @@
       <option name="presentableId" value="Default" />
       <updated>1729335799053</updated>
       <workItem from="1729335800123" duration="8000" />
+      <workItem from="1729336007409" duration="48000" />
+      <workItem from="1729336101914" duration="3929000" />
+      <workItem from="1730458049987" duration="995000" />
+      <workItem from="1731155283989" duration="5182000" />
+      <workItem from="1731171704494" duration="11768000" />
     </task>
     <servers />
   </component>
