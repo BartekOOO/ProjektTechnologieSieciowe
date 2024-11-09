@@ -4,32 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_12_8_1_jre8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IDeleteData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IInsertData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IUpdateData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/MainClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/MainServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/ConfigD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/RequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Network/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Network/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Network/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/DataRow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/DataTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/SQLService.java" afterDir="false" />
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="procedury sql">
+      <change afterPath="$PROJECT_DIR$/src/Services/Kodek/Kodek.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechnologieSiecioweProjekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TechnologieSiecioweProjekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/DataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/DataRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/DataTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/DataTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/SQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/SQLService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +84,33 @@
       <workItem from="1729336101914" duration="3929000" />
       <workItem from="1730458049987" duration="995000" />
       <workItem from="1731155283989" duration="5182000" />
-      <workItem from="1731171704494" duration="11768000" />
+      <workItem from="1731171704494" duration="13274000" />
     </task>
+    <task id="LOCAL-00001" summary="pierwszy commit">
+      <option name="closed" value="true" />
+      <created>1731186552365</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731186552365</updated>
+    </task>
+    <task id="LOCAL-00002" summary="procedury sql">
+      <option name="closed" value="true" />
+      <created>1731186654845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731186654845</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pierwszy commit" />
+    <MESSAGE value="procedury sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="procedury sql" />
   </component>
 </project>

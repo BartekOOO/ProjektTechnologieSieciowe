@@ -1,6 +1,5 @@
-package Services;
+package Services.SQLService;
 import java.sql.*;
-import java.sql.Date;
 import java.util.*;
 
 import Interfaces.IConfig;

@@ -1,14 +1,12 @@
 package Main;
 
 import Models.ConfigD;
-import Services.DataRow;
-import Services.DataTable;
-import Services.SQLService;
+import Services.SQLService.DataRow;
+import Services.SQLService.DataTable;
+import Services.SQLService.SQLService;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
 
 public class TestMain {
 
