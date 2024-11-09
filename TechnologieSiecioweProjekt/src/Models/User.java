@@ -54,8 +54,10 @@ public class User implements IUpdateData, IInsertData, IDeleteData {
 
 
     @Override
-    public int GetId() {
-        return this.Id;
+    public Dictionary<String, Object> GetDeleteParameters() {
+        Dictionary<String,Object> result = new Hashtable<>();
+        result.put("@Id",this.Id);
+        return result;
     }
 
     @Override

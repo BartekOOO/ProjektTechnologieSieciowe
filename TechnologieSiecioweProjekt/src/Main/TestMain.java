@@ -14,14 +14,14 @@ public class TestMain {
     public static void main(String[] args) {
         SQLService service = new SQLService(new ConfigD());
 
-        String query = "PROJEKT.InsertUser";
+        String query = "PROJEKT.DeleteUser";
 
-        User user = new User(0,"Nowy","Haslo","emeilo");
+        User user = new User(4,"Nowy","Hasloedytowany","emeilo");
 
         System.out.println(user.GetInsertParameters());
 
 
-        DataTable result = service.ExecuteStoredProcedureWithResult(query,user.GetInsertParameters());
+        DataTable result = service.ExecuteStoredProcedureWithResult(query,user.GetDeleteParameters());
 
     }
 

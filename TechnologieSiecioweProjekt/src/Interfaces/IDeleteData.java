@@ -1,5 +1,7 @@
 package Interfaces;
 
+import java.util.Dictionary;
+
 public interface IDeleteData {
-    int GetId();
+    Dictionary<String, Object> GetDeleteParameters();
 }
