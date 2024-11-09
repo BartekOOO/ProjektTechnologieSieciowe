@@ -18,8 +18,32 @@ public class SQLService {
 
     public DataTable ExecuteStoredProcedureWithResult(String query, Dictionary<String, Object> parameters) {
         DataTable resultTable = new DataTable();
-        try (CallableStatement callableStatement = connection.prepareCall(query)) {
+
+        StringBuilder queryWithPlaceholders = new StringBuilder("{CALL " + query + "(");
+        for (int i = 0; i < parameters.size(); i++) {
+            if (i > 0) queryWithPlaceholders.append(", ");
+            queryWithPlaceholders.append("?");
+        }
+        queryWithPlaceholders.append(")}");
+
+        try (CallableStatement callableStatement = connection.prepareCall(queryWithPlaceholders.toString())) {
             Enumeration<String> keys = parameters.keys();
+            while (keys.hasMoreElements()) {
+                String key = keys.nextElement();
+                Object value = parameters.get(key);
+
+
+                if (value instanceof String) {
+                    callableStatement.setString(key, (String) value);
+                } else if (value instanceof Integer) {
+                    callableStatement.setInt(key, (Integer) value);
+                } else if (value instanceof Boolean) {
+                    callableStatement.setBoolean(key, (Boolean) value);
+                } else {
+                    callableStatement.setObject(key, value);
+                }
+            }
+
             boolean hasResultSet = callableStatement.execute();
             if (hasResultSet) {
                 try (ResultSet resultSet = callableStatement.getResultSet()) {
@@ -31,7 +55,7 @@ public class SQLService {
                         for (int i = 1; i <= columnCount; i++) {
                             String columnName = metaData.getColumnName(i);
                             Object columnValue = resultSet.getObject(i);
-                            row.AddField(columnName,columnValue);
+                            row.AddField(columnName, columnValue);
                         }
                         resultTable.AddDataRow(row);
                     }
@@ -44,12 +68,5 @@ public class SQLService {
         return resultTable;
     }
 
-    private static <T> T getField(Map<String, Object> row, String columnName, Class<T> type) {
-        Object value = row.get(columnName);
-        if (value != null && type.isInstance(value)) {
-            return type.cast(value);
-        }
-        return null;
-    }
 
 }

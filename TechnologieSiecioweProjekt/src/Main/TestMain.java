@@ -1,6 +1,7 @@
 package Main;
 
 import Models.ConfigD;
+import Models.User;
 import Services.SQLService.DataRow;
 import Services.SQLService.DataTable;
 import Services.SQLService.SQLService;
@@ -13,15 +14,14 @@ public class TestMain {
     public static void main(String[] args) {
         SQLService service = new SQLService(new ConfigD());
 
-        String query = "PROJEKT.GetUsers";
-        Dictionary<String,Object> params = new Hashtable<>();
+        String query = "PROJEKT.InsertUser";
 
-        DataTable result = service.ExecuteStoredProcedureWithResult(query,params);
+        User user = new User(0,"Nowy","Haslo","emeilo");
 
-        for(DataRow row : result.GetRows()){
-            String id = row.getFieldValue("PUS_UserName");
-            System.out.println(id);
-        }
+        System.out.println(user.GetInsertParameters());
+
+
+        DataTable result = service.ExecuteStoredProcedureWithResult(query,user.GetInsertParameters());
 
     }
 

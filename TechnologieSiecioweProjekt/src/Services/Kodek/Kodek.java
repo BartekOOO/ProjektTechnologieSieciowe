@@ -5,9 +5,9 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
 public class Kodek {
-
-    public static String Encrypt(String text, String secretKey) throws Exception {
-        SecretKeySpec keySpec = new SecretKeySpec(secretKey.getBytes(), "AES");
+    private static String Key = "WANDUIEWBLWDRFKUWODFKWOD";
+    public static String Encrypt(String text) throws Exception {
+        SecretKeySpec keySpec = new SecretKeySpec(Key.getBytes(), "AES");
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.ENCRYPT_MODE, keySpec);
 
@@ -16,8 +16,8 @@ public class Kodek {
         return Base64.getEncoder().encodeToString(encryptedText);
     }
 
-    public static String Decrypt(String encryptedText, String secretKey) throws Exception {
-        SecretKeySpec keySpec = new SecretKeySpec(secretKey.getBytes(), "AES");
+    public static String Decrypt(String encryptedText) throws Exception {
+        SecretKeySpec keySpec = new SecretKeySpec(Key.getBytes(), "AES");
 
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.DECRYPT_MODE, keySpec);

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="procedury sql">
-      <change afterPath="$PROJECT_DIR$/src/Services/Kodek/Kodek.java" afterDir="false" />
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="lekkie poprawki folderow">
+      <change beforePath="$PROJECT_DIR$/../SQL/Procedury/Users/InsertUser.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL/Procedury/Users/InsertUser.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/IUpdateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IUpdateData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/DataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/DataRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/DataTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/DataTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/SQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/SQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Kodek/Kodek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Kodek/Kodek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/SQLService/SQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/SQLService/SQLService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <workItem from="1729336101914" duration="3929000" />
       <workItem from="1730458049987" duration="995000" />
       <workItem from="1731155283989" duration="5182000" />
-      <workItem from="1731171704494" duration="13274000" />
+      <workItem from="1731171704494" duration="18171000" />
     </task>
     <task id="LOCAL-00001" summary="pierwszy commit">
       <option name="closed" value="true" />
@@ -102,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731186654845</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lekkie poprawki folderow">
+      <option name="closed" value="true" />
+      <created>1731188073452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731188073452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +119,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pierwszy commit" />
     <MESSAGE value="procedury sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="procedury sql" />
+    <MESSAGE value="lekkie poprawki folderow" />
+    <option name="LAST_COMMIT_MESSAGE" value="lekkie poprawki folderow" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/Kodek/Kodek.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/Kodek/Kodek.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

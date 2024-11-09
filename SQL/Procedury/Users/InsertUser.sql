@@ -10,3 +10,4 @@ BEGIN
 	(@UserName,@Email,@Password)
 END
 GO
+--EXEC [PROJEKT].InsertUser 'debil','email','haslo'
