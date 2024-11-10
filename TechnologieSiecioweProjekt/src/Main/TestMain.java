@@ -36,14 +36,14 @@ public class TestMain {
         RequestData requestData = new RequestData(Method.Post,"tokenowy",user);
         //System.out.println(requestData.ToJSONBody());
 
-        ResponseData respone = new ResponseData(ResponseCode.OK,user,"Success");
+        ResponseData respone = new ResponseData(ResponseCode.OK,user.GetClassName(),user,"Success");
 
         user.ReadDataFromJSON(respone.ToJSONBody());
 
         //System.out.println(user.ToJSONBody());
 
         Client testClient = new Client("localhost",5001);
-        testClient.sendData(requestData);
+        testClient.SendData(requestData);
 
     }
 

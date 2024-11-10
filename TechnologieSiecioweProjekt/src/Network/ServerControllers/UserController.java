@@ -1,4 +1,4 @@
-package Services.JSONService;
+package Network.ServerControllers;
 
 import Models.*;
 import Services.SQLService.SQLService;
@@ -6,10 +6,8 @@ import Services.SQLService.SQLService;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class ServerDataService {
-
-
-    public static ResponseData ProcessData(RequestData requestData){
+public class UserController {
+    public static ResponseData ProcessUser(RequestData requestData){
         ResponseData result = new ResponseData();
 
         SQLService sqlService = new SQLService(new ConfigD());
@@ -31,13 +29,19 @@ public class ServerDataService {
             case Method.Put:
 
                 break;
+            case Method.LogIn:
+
+                break;
+            case Method.GetList:
+
+                break;
+            case Method.LogOut:
+
+                break;
             default:
 
                 break;
         }
         return result;
     }
-
-
-
 }

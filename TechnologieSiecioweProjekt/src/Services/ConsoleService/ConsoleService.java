@@ -35,6 +35,15 @@ public class ConsoleService {
         }
     }
     public void Logowanie(){
+        System.out.println("Podaj nazwę użytkownika:");
+        String userName = scanner.nextLine();
+
+        System.out.println("Podaj hasło:");
+        String password = scanner.nextLine();
+
+        User user = new User(0,userName,password,"");
+        RequestData requestData = new RequestData(Method.LogIn,"",user);
+        client.SendData(requestData);
 
     }
 
@@ -51,7 +60,9 @@ public class ConsoleService {
         User user = new User(0,userName,password,email);
         RequestData requestData = new RequestData(Method.Post,"",user);
 
-        client.sendData(requestData);
+        client.SendData(requestData);
+
+        System.out.println(client.GetResponseString());
 
     }
 

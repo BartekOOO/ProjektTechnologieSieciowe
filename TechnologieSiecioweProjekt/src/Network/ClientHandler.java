@@ -1,9 +1,8 @@
 package Network;
 
 import Models.RequestData;
-import Models.ResponseCode;
 import Models.ResponseData;
-import Services.JSONService.ServerDataService;
+import Network.ServerControllers.ServerDataService;
 
 import java.io.*;
 import java.net.Socket;

@@ -35,4 +35,13 @@ public enum ResponseCode {
     public String toString() {
         return code + " " + description;
     }
+
+    public static ResponseCode fromInt(int code) {
+        for (ResponseCode responseCode : ResponseCode.values()) {
+            if (responseCode.getCode() == code) {
+                return responseCode;
+            }
+        }
+        throw new IllegalArgumentException("Nieznany kod odpowiedzi: " + code);
+    }
 }

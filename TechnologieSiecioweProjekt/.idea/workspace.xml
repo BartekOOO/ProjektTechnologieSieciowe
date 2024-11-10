@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="Wysyłanie dla serwera requestdata i możliwość jej deserializowania">
-      <change afterPath="$PROJECT_DIR$/src/Models/EmptyData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/JSONService/ServerDataService.java" afterDir="false" />
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="Wysyłanie dla serwera zapytania by dodać nowego użytkownika">
+      <change afterPath="$PROJECT_DIR$/src/Models/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/ServerControllers/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Network/ServerControllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/IData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Method.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Network/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/JSONService/ServerDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ServerControllers/ServerDataService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +49,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.MainClient.executor": "Run",
-    "Application.MainServer.executor": "Run",
+    "Application.MainClient.executor": "Debug",
+    "Application.MainServer.executor": "Debug",
     "Application.TestMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -86,7 +90,7 @@
       <workItem from="1730458049987" duration="995000" />
       <workItem from="1731155283989" duration="5182000" />
       <workItem from="1731171704494" duration="21935000" />
-      <workItem from="1731231578141" duration="30978000" />
+      <workItem from="1731231578141" duration="34012000" />
     </task>
     <task id="LOCAL-00001" summary="pierwszy commit">
       <option name="closed" value="true" />
@@ -160,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731267698793</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Wysyłanie dla serwera zapytania by dodać nowego użytkownika">
+      <option name="closed" value="true" />
+      <created>1731269892946</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731269892946</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +188,8 @@
     <MESSAGE value="JAVA TO GÓWNO" />
     <MESSAGE value="pierwsze testy komunikacji serwe-klient" />
     <MESSAGE value="Wysyłanie dla serwera requestdata i możliwość jej deserializowania" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wysyłanie dla serwera requestdata i możliwość jej deserializowania" />
+    <MESSAGE value="Wysyłanie dla serwera zapytania by dodać nowego użytkownika" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wysyłanie dla serwera zapytania by dodać nowego użytkownika" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -208,12 +221,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
-          <line>22</line>
+          <line>21</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
-          <line>38</line>
+          <line>37</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -225,6 +238,11 @@
           <url>file://$PROJECT_DIR$/src/Models/RequestData.java</url>
           <line>48</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Models/ResponseData.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/Services/JSONService/JSONService.java</url>
