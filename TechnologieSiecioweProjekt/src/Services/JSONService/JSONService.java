@@ -12,19 +12,15 @@ public class JSONService {
     public JSONService(String JSONRow) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            // Deserializacja JSON-a do Mapy
             Map<String, Object> fieldsMap = objectMapper.readValue(JSONRow, new TypeReference<Map<String, Object>>() {});
 
-            // Iteracja po mapie i dodanie wartości do słownika
             for (Map.Entry<String, Object> entry : fieldsMap.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
 
-                // Jeżeli wartość jest obiektem (np. lista, mapa), możesz to traktować jak JSON String
                 if (value instanceof String) {
                     fields.put(key, (String) value);
                 } else {
-                    // Zmieniamy inne obiekty na JSON String
                     fields.put(key, objectMapper.writeValueAsString(value));
                 }
             }
@@ -35,7 +31,7 @@ public class JSONService {
     }
 
 
-    public String getJSONFieldValue(String fieldName) {
+    public String GetJSONFieldValue(String fieldName) {
         for (Enumeration<String> keys = fields.keys(); keys.hasMoreElements(); ) {
             String key = keys.nextElement();
             String value = fields.get(key);

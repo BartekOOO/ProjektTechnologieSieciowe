@@ -87,11 +87,11 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
 
     @Override
     public String ToJSONBody() {
-        StringBuilder result = new StringBuilder("{");
-        result.append("\"id\":").append(this.Id).append(",");
-        result.append("\"userName\":\"").append(this.UserName).append("\",");
-        result.append("\"email\":\"").append(this.Email).append("\",");
-        result.append("\"password\":\"").append(this.Password).append("\"");
+        StringBuilder result = new StringBuilder("{"+ "\n");
+        result.append("\"id\":").append(this.Id).append(","+ "\n");
+        result.append("\"userName\":\"").append(this.UserName).append("\","+ "\n");
+        result.append("\"email\":\"").append(this.Email).append("\","+ "\n");
+        result.append("\"password\":\"").append(this.Password).append("\""+ "\n");
         result.append("}");
         return result.toString();
     }
@@ -99,12 +99,12 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
     @Override
     public void ReadDataFromJSON(ResponseData responseData) {
         JSONService JSONBody = new JSONService(responseData.ToJSONBody());
-        if(JSONBody.getJSONFieldValue("className").equals("User")){
-            JSONService JSONData = new JSONService(JSONBody.getJSONFieldValue("data"));
-            this.Id = Integer.parseInt(JSONData.getJSONFieldValue("id"));
-            this.Email = JSONData.getJSONFieldValue("email");
-            this.UserName = JSONData.getJSONFieldValue("userName");
-            this.Password = JSONData.getJSONFieldValue("password");
+        if(JSONBody.GetJSONFieldValue("className").equals("User")){
+            JSONService JSONData = new JSONService(JSONBody.GetJSONFieldValue("data"));
+            this.Id = Integer.parseInt(JSONData.GetJSONFieldValue("id"));
+            this.Email = JSONData.GetJSONFieldValue("email");
+            this.UserName = JSONData.GetJSONFieldValue("userName");
+            this.Password = JSONData.GetJSONFieldValue("password");
         }
     }
 

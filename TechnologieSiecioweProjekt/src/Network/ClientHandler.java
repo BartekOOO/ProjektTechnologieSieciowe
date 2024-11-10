@@ -1,33 +1,44 @@
 package Network;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 
-public class ClientHandler implements Runnable{
-    private Socket _clientSocket;
+public class ClientHandler implements Runnable {
+    private Socket clientSocket;
 
     public ClientHandler(Socket socket) {
-        this._clientSocket = socket;
+        this.clientSocket = socket;
     }
     @Override
     public void run() {
         try (
-                BufferedReader in = new BufferedReader(new InputStreamReader(_clientSocket.getInputStream()));
-                PrintWriter out = new PrintWriter(_clientSocket.getOutputStream(), true);
+                InputStream in = clientSocket.getInputStream();
+                OutputStream out = clientSocket.getOutputStream();
         ) {
-            String message;
-            while ((message = in.readLine()) != null) {
-                System.out.println("Otrzymano od klienta: " + message);
-                out.println("Serwer: " + message);
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            StringBuilder messageBuilder = new StringBuilder();
+
+            while ((bytesRead = in.read(buffer)) != -1) {
+                String data = new String(buffer, 0, bytesRead, "UTF-8");
+                messageBuilder.append(data);
+
+                if (data.contains("\n")) {
+                    break;
+                }
             }
+
+            String message = messageBuilder.toString().replace("\n", "");
+            System.out.println("Otrzymano od klienta: " + message);
+
+            out.write(("Serwer otrzymał: " + message).getBytes("UTF-8"));
+            out.flush();
+
         } catch (IOException e) {
             System.err.println("Błąd w komunikacji z klientem: " + e.getMessage());
         } finally {
             try {
-                _clientSocket.close();
+                clientSocket.close();
             } catch (IOException e) {
                 System.err.println("Błąd przy zamykaniu połączenia: " + e.getMessage());
             }

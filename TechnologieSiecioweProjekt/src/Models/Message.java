@@ -21,10 +21,10 @@ public class Message implements IData, IInsertData {
 
     @Override
     public String ToJSONBody() {
-        StringBuilder result = new StringBuilder("{");
-        result.append("\"senderId\":").append(this.SenderId).append(",");
-        result.append("\"receiverId\":").append(this.ReceiverId).append(",");
-        result.append("\"message\":\"").append(this.Message).append("\"");
+        StringBuilder result = new StringBuilder("{"+ "\n");
+        result.append("\"senderId\":").append(this.SenderId).append(","+ "\n");
+        result.append("\"receiverId\":").append(this.ReceiverId).append(","+ "\n");
+        result.append("\"message\":\"").append(this.Message).append("\""+ "\n");
         result.append("}");
         return result.toString();
     }

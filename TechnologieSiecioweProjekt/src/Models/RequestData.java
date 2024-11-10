@@ -20,11 +20,11 @@ public class RequestData {
     }
 
     public String ToJSONBody() {
-        StringBuilder result = new StringBuilder("{");
-        result.append("\"method\":").append(method.ordinal()).append(",");
-        result.append("\"token\":\"").append(token).append("\",");
-        result.append("\"data\":").append(data.ToJSONBody()).append(",");
-        result.append("\"className\":\"").append(className).append("\"");
+        StringBuilder result = new StringBuilder("{"+ "\n");
+        result.append("\"method\":").append(method.ordinal()).append(","+ "\n");
+        result.append("\"token\":\"").append(token).append("\","+ "\n");
+        result.append("\"data\":").append(data.ToJSONBody()).append(","+ "\n");
+        result.append("\"className\":\"").append(className).append("\""+ "\n");
         result.append("}");
         return result.toString();
     }

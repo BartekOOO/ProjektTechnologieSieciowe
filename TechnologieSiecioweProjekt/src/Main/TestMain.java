@@ -1,6 +1,7 @@
 package Main;
 
 import Models.*;
+import Network.Client;
 import Services.SQLService.DataRow;
 import Services.SQLService.DataTable;
 import Services.SQLService.SQLService;
@@ -39,7 +40,10 @@ public class TestMain {
 
         user.ReadDataFromJSON(respone);
 
-        System.out.println(user.GetInsertParameters());
+        System.out.println(user.ToJSONBody());
+
+        Client testClient = new Client("localhost",5001);
+        testClient.sendMessage(requestData);
 
     }
 
