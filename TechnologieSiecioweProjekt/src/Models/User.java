@@ -1,5 +1,6 @@
 package Models;
 
+import Interfaces.IData;
 import Interfaces.IDeleteData;
 import Interfaces.IInsertData;
 import Interfaces.IUpdateData;
@@ -9,7 +10,7 @@ import Services.SQLService.DataRow;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class User implements IUpdateData, IInsertData, IDeleteData {
+public class User implements IUpdateData, IInsertData, IDeleteData, IData {
     private int Id;
     private String UserName;
     private String Email;
@@ -75,4 +76,21 @@ public class User implements IUpdateData, IInsertData, IDeleteData {
         params.put("@Id",this.Id);
         return params;
     }
+
+    @Override
+    public String GetClassName() {
+        return "User";
+    }
+
+    @Override
+    public String ToJSONBody() {
+        StringBuilder result = new StringBuilder("[{");
+        result.append("\"id\":").append(this.Id).append(",");
+        result.append("\"userName\":\"").append(this.UserName).append("\",");
+        result.append("\"email\":\"").append(this.Email).append("\",");
+        result.append("\"password\":\"").append(this.Password).append("\"");
+        result.append("}]");
+        return result.toString();
+    }
+
 }

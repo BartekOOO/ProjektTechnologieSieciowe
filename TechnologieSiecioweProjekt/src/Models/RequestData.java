@@ -19,12 +19,13 @@ public class RequestData {
         this.className = data.GetClassName();
     }
 
-    @Override
-    public String toString() {
-        return "Models.RequestData{" +
-                "method=" + method +
-                ", loginToken='" + token + '\'' +
-                ", query='" + data.toString() + '\'' +
-                '}';
+    public String ToJSONBody() {
+        StringBuilder result = new StringBuilder("[{");
+        result.append("\"method\":").append(method).append(",");
+        result.append("\"token\":\"").append(token).append("\",");
+        result.append("\"data\":").append(data.ToJSONBody()).append(",");
+        result.append("\"className\":\"").append(className).append("\"");
+        result.append("}]");
+        return result.toString();
     }
 }

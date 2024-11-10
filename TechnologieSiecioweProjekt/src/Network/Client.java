@@ -1,5 +1,7 @@
 package Network;
 
+import Models.RequestData;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,15 +17,15 @@ public class Client {
         this._port = port;
     }
 
-    public void sendMessage(String message) {
+    public void sendMessage(RequestData requestData) {
         try (
                 Socket socket = new Socket(_serverAddress, _port);
 
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         ) {
-            out.println(message);
-            System.out.println("Wysłano do serwera: " + message);
+            //out.println(message);
+            //System.out.println("Wysłano do serwera: " + message);
 
             String response = in.readLine();
             System.out.println("Odpowiedź od serwera: " + response);

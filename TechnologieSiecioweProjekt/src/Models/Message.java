@@ -21,12 +21,12 @@ public class Message implements IData, IInsertData {
 
     @Override
     public String ToJSONBody() {
-        String result = "[{";
-        result = result + "senderId:"+this.SenderId+",";
-        result = result + "receiverId:"+this.ReceiverId+",";
-        result = result + "message:"+this.Message+",";
-        result = result + "}]";
-        return result;
+        StringBuilder result = new StringBuilder("[{");
+        result.append("\"senderId\":").append(this.SenderId).append(",");
+        result.append("\"receiverId\":").append(this.ReceiverId).append(",");
+        result.append("\"message\":\"").append(this.Message).append("\"");
+        result.append("}]");
+        return result.toString();
     }
 
     @Override
