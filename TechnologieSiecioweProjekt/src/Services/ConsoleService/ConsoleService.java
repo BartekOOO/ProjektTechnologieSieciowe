@@ -1,4 +1,7 @@
 package Services.ConsoleService;
+import Models.Method;
+import Models.RequestData;
+import Models.User;
 import Network.Client;
 
 import java.io.IOException;
@@ -45,6 +48,10 @@ public class ConsoleService {
         System.out.println("Podaj adres email:");
         String email = scanner.nextLine();
 
+        User user = new User(0,userName,password,email);
+        RequestData requestData = new RequestData(Method.Post,"",user);
+
+        client.sendMessage(requestData);
 
     }
 

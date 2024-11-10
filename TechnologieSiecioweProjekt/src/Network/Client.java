@@ -24,8 +24,8 @@ public class Client {
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         ) {
-            //out.println(message);
-            //System.out.println("Wysłano do serwera: " + message);
+            out.println(requestData.ToJSONBody());
+            System.out.println("Wysłano do serwera: " + requestData.ToJSONBody());
 
             String response = in.readLine();
             System.out.println("Odpowiedź od serwera: " + response);

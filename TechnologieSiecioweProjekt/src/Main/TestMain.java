@@ -35,6 +35,12 @@ public class TestMain {
         RequestData requestData = new RequestData(Method.Post,"tokenowy",user);
         System.out.println(requestData.ToJSONBody());
 
+        ResponseData respone = new ResponseData(ResponseCode.OK,user,"Success");
+
+        user.ReadDataFromJSON(respone);
+
+        System.out.println(user.GetInsertParameters());
+
     }
 
 

@@ -4,6 +4,7 @@ import Interfaces.IData;
 import Interfaces.IDeleteData;
 import Interfaces.IInsertData;
 import Interfaces.IUpdateData;
+import Services.JSONService.JSONService;
 import Services.Kodek.Kodek;
 import Services.SQLService.DataRow;
 
@@ -33,6 +34,8 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
         this.UserName = UserName;
         SetPassword(Password);
     }
+
+
 
 
     public void SetPassword(String password){
@@ -84,13 +87,26 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
 
     @Override
     public String ToJSONBody() {
-        StringBuilder result = new StringBuilder("[{");
+        StringBuilder result = new StringBuilder("{");
         result.append("\"id\":").append(this.Id).append(",");
         result.append("\"userName\":\"").append(this.UserName).append("\",");
         result.append("\"email\":\"").append(this.Email).append("\",");
         result.append("\"password\":\"").append(this.Password).append("\"");
-        result.append("}]");
+        result.append("}");
         return result.toString();
     }
+
+    @Override
+    public void ReadDataFromJSON(ResponseData responseData) {
+        JSONService JSONBody = new JSONService(responseData.ToJSONBody());
+        if(JSONBody.getJSONFieldValue("className").equals("User")){
+            JSONService JSONData = new JSONService(JSONBody.getJSONFieldValue("data"));
+            this.Id = Integer.parseInt(JSONData.getJSONFieldValue("id"));
+            this.Email = JSONData.getJSONFieldValue("email");
+            this.UserName = JSONData.getJSONFieldValue("userName");
+            this.Password = JSONData.getJSONFieldValue("password");
+        }
+    }
+
 
 }
