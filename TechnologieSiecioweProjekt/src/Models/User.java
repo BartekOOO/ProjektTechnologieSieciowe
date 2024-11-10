@@ -28,7 +28,11 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
         this.Password = row.getFieldValue("PUS_Password");
     }
 
-    public User(int Id,String UserName,String Password,String Email){
+    public String getUserName() {
+        return UserName;
+    }
+
+    public User(int Id, String UserName, String Password, String Email){
         this.Id = Id;
         this.Email = Email;
         this.UserName = UserName;

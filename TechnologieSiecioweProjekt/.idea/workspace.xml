@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="Lepsze odbieranie i wysyłanie">
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="kontrolery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/ServerControllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ServerControllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
       <workItem from="1730458049987" duration="995000" />
       <workItem from="1731155283989" duration="5182000" />
       <workItem from="1731171704494" duration="21935000" />
-      <workItem from="1731231578141" duration="35807000" />
+      <workItem from="1731231578141" duration="40115000" />
     </task>
     <task id="LOCAL-00001" summary="pierwszy commit">
       <option name="closed" value="true" />
@@ -170,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731272878667</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="kontrolery">
+      <option name="closed" value="true" />
+      <created>1731274863308</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731274863308</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +197,8 @@
     <MESSAGE value="Wysyłanie dla serwera requestdata i możliwość jej deserializowania" />
     <MESSAGE value="Wysyłanie dla serwera zapytania by dodać nowego użytkownika" />
     <MESSAGE value="Lepsze odbieranie i wysyłanie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lepsze odbieranie i wysyłanie" />
+    <MESSAGE value="kontrolery" />
+    <option name="LAST_COMMIT_MESSAGE" value="kontrolery" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
