@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="pierwsze testy komunikacji serwe-klient">
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="Wysyłanie dla serwera requestdata i możliwość jej deserializowania">
+      <change afterPath="$PROJECT_DIR$/src/Models/EmptyData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/JSONService/ServerDataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaces/IData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Method.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/RequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/RequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Network/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +46,8 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.MainClient.executor": "Run",
-    "Application.MainServer.executor": "Debug",
-    "Application.TestMain.executor": "Debug",
+    "Application.MainServer.executor": "Run",
+    "Application.TestMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -88,7 +86,7 @@
       <workItem from="1730458049987" duration="995000" />
       <workItem from="1731155283989" duration="5182000" />
       <workItem from="1731171704494" duration="21935000" />
-      <workItem from="1731231578141" duration="28821000" />
+      <workItem from="1731231578141" duration="30978000" />
     </task>
     <task id="LOCAL-00001" summary="pierwszy commit">
       <option name="closed" value="true" />
@@ -154,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731263176251</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Wysyłanie dla serwera requestdata i możliwość jej deserializowania">
+      <option name="closed" value="true" />
+      <created>1731267698793</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731267698793</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +175,8 @@
     <MESSAGE value="jsony" />
     <MESSAGE value="JAVA TO GÓWNO" />
     <MESSAGE value="pierwsze testy komunikacji serwe-klient" />
-    <option name="LAST_COMMIT_MESSAGE" value="pierwsze testy komunikacji serwe-klient" />
+    <MESSAGE value="Wysyłanie dla serwera requestdata i możliwość jej deserializowania" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wysyłanie dla serwera requestdata i możliwość jej deserializowania" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -201,12 +208,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
-          <line>19</line>
+          <line>22</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
-          <line>35</line>
+          <line>38</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

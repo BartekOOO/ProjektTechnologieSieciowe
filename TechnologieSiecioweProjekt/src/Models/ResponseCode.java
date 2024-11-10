@@ -12,7 +12,7 @@ public enum ResponseCode {
 
     INTERNAL_SERVER_ERROR(500, "Błąd serwera wewnętrznego"),
     NOT_IMPLEMENTED(501, "Nie zaimplementowano"),
-    BAD_GATEWAY(502, "Zły brama"),
+    BAD_GATEWAY(502, "Zła brama"),
     SERVICE_UNAVAILABLE(503, "Usługa niedostępna");
 
     private final int code;

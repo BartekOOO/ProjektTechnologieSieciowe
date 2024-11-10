@@ -1,6 +1,9 @@
 package Network;
 
 import Models.RequestData;
+import Models.ResponseCode;
+import Models.ResponseData;
+import Services.JSONService.ServerDataService;
 
 import java.io.*;
 import java.net.Socket;
@@ -36,7 +39,9 @@ public class ClientHandler implements Runnable {
             requestData.ReadDataFromJSON(message);
             System.out.println(requestData.ToJSONBody());
 
-            out.write(("Serwer otrzymał dane").getBytes("UTF-8"));
+            ResponseData response = ServerDataService.ProcessData(requestData);
+
+            out.write((response.ToJSONBody()).getBytes("UTF-8"));
             out.flush();
 
         } catch (IOException e) {

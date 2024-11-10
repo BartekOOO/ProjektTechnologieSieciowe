@@ -1,6 +1,7 @@
 package Models;
 
 import Interfaces.IData;
+import com.sun.net.httpserver.Authenticator;
 
 public class ResponseData {
     private ResponseCode code;
@@ -13,6 +14,12 @@ public class ResponseData {
         this.Status = Status;
     }
 
+    public ResponseData(){
+        code = ResponseCode.OK;
+        JSONResponse = null;
+        Status = "Success";
+    }
+
     public String ToJSONBody(){
         StringBuilder result = new StringBuilder("{"+ "\n");
         result.append("\"code\":").append(this.code.ordinal()).append(","+ "\n");
@@ -23,4 +30,15 @@ public class ResponseData {
         return result.toString();
     }
 
+    public void setCode(ResponseCode code) {
+        this.code = code;
+    }
+
+    public void setJSONResponse(IData JSONResponse) {
+        this.JSONResponse = JSONResponse;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
 }

@@ -1,13 +1,15 @@
 package Models;
 
 import Interfaces.IData;
+import Interfaces.IDeleteData;
 import Interfaces.IInsertData;
+import Interfaces.IUpdateData;
 
 import java.sql.Date;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class Message implements IData, IInsertData {
+public class Message implements IData {
     public int Id;
     public int ReceiverId;
     public int SenderId;
@@ -41,5 +43,15 @@ public class Message implements IData, IInsertData {
         result.put("@ReceiverId",this.ReceiverId);
         result.put("@Message",this.Message);
         return  result;
+    }
+
+    @Override
+    public Dictionary<String, Object> GetDeleteParameters() {
+        return null;
+    }
+
+    @Override
+    public Dictionary<String, Object> GetUpdateParameters() {
+        return null;
     }
 }
