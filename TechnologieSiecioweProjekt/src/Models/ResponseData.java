@@ -66,7 +66,7 @@ public class ResponseData {
 
     public String ToJSONBody(){
         StringBuilder result = new StringBuilder("{"+ "\n");
-        result.append("\"code\":").append(this.code.ordinal()).append(","+ "\n");
+        result.append("\"code\":").append(this.code.getCode()).append(","+ "\n");
         result.append("\"className\":\"").append(this.JSONResponse.GetClassName()).append("\","+ "\n");
         result.append("\"data\":").append(this.JSONResponse.ToJSONBody()).append(","+ "\n");
         result.append("\"status\":\"").append(this.Status).append("\""+ "\n");
