@@ -16,7 +16,7 @@ public class Client {
         this.port = port;
     }
 
-    public void sendMessage(RequestData requestData) {
+    public void sendData(RequestData requestData) {
         try (
                 Socket socket = new Socket(serverAddress, port);
                 OutputStream out = socket.getOutputStream();
@@ -25,7 +25,7 @@ public class Client {
             byte[] data = (requestData.ToJSONBody() + "\n").getBytes("UTF-8");
             out.write(data);
             out.flush();
-            System.out.println("Wysłano do serwera: " + requestData.ToJSONBody());
+
 
             byte[] responseBuffer = new byte[1024];
             int bytesRead = in.read(responseBuffer);

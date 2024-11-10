@@ -51,7 +51,7 @@ public class ConsoleService {
         User user = new User(0,userName,password,email);
         RequestData requestData = new RequestData(Method.Post,"",user);
 
-        client.sendMessage(requestData);
+        client.sendData(requestData);
 
     }
 

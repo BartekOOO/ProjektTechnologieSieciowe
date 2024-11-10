@@ -30,7 +30,7 @@ public class Message implements IData, IInsertData {
     }
 
     @Override
-    public void ReadDataFromJSON(ResponseData responseData) {
+    public void ReadDataFromJSON(String JSONData) {
 
     }
 

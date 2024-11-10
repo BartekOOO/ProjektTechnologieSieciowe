@@ -19,31 +19,31 @@ public class TestMain {
 
         User user = new User(4,"Nowy","Hasloedytowany","emeilo");
 
-        System.out.println(user.GetInsertParameters());
+        //System.out.println(user.GetInsertParameters());
 
         //Test działania na bazie danych
         //DataTable result = service.ExecuteStoredProcedureWithResult(query,user.GetDeleteParameters());
 
-        System.out.println(user.ToJSONBody());
+        //System.out.println(user.ToJSONBody());
 
         Message message = new Message();
         message.Message = "testowa wiadomosc";
         message.SenderId = 1;
         message.ReceiverId = 2;
 
-        System.out.println(message.ToJSONBody());
+        //System.out.println(message.ToJSONBody());
 
         RequestData requestData = new RequestData(Method.Post,"tokenowy",user);
-        System.out.println(requestData.ToJSONBody());
+        //System.out.println(requestData.ToJSONBody());
 
         ResponseData respone = new ResponseData(ResponseCode.OK,user,"Success");
 
-        user.ReadDataFromJSON(respone);
+        user.ReadDataFromJSON(respone.ToJSONBody());
 
-        System.out.println(user.ToJSONBody());
+        //System.out.println(user.ToJSONBody());
 
         Client testClient = new Client("localhost",5001);
-        testClient.sendMessage(requestData);
+        testClient.sendData(requestData);
 
     }
 

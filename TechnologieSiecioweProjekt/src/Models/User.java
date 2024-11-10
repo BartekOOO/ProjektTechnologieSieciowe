@@ -97,14 +97,14 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
     }
 
     @Override
-    public void ReadDataFromJSON(ResponseData responseData) {
-        JSONService JSONBody = new JSONService(responseData.ToJSONBody());
+    public void ReadDataFromJSON(String JSONData) {
+        JSONService JSONBody = new JSONService(JSONData);
         if(JSONBody.GetJSONFieldValue("className").equals("User")){
-            JSONService JSONData = new JSONService(JSONBody.GetJSONFieldValue("data"));
-            this.Id = Integer.parseInt(JSONData.GetJSONFieldValue("id"));
-            this.Email = JSONData.GetJSONFieldValue("email");
-            this.UserName = JSONData.GetJSONFieldValue("userName");
-            this.Password = JSONData.GetJSONFieldValue("password");
+            JSONService JSONDataChild = new JSONService(JSONBody.GetJSONFieldValue("data"));
+            this.Id = Integer.parseInt(JSONDataChild.GetJSONFieldValue("id"));
+            this.Email = JSONDataChild.GetJSONFieldValue("email");
+            this.UserName = JSONDataChild.GetJSONFieldValue("userName");
+            this.Password = JSONDataChild.GetJSONFieldValue("password");
         }
     }
 
