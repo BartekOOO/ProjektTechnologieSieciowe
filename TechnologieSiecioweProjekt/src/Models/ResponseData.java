@@ -35,6 +35,7 @@ public class ResponseData {
 
         String codeString = JSONBody.GetJSONFieldValue("code");
         String dataString = JSONBody.GetJSONFieldValue("data");
+        ClassName = JSONBody.GetJSONFieldValue("className");
 
         try{
             this.code = ResponseCode.fromInt(Integer.parseInt(codeString));

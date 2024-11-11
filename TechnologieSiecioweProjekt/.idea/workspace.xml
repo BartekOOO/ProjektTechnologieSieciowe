@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="kolejne ulepszenia dodawania">
+    <list default="true" id="62f1e9da-33e2-44cc-a496-a1792ff637ea" name="Changes" comment="poprawka interfejsów">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/IData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/IData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/EmptyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/EmptyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Method.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResponseData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network/ServerControllers/ServerDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ServerControllers/ServerDataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Network/ServerControllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network/ServerControllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ConsoleService/ConsoleService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +43,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.MainClient.executor": "Debug",
-    "Application.MainServer.executor": "Run",
+    "Application.MainServer.executor": "Debug",
     "Application.TestMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -88,7 +84,7 @@
       <workItem from="1731155283989" duration="5182000" />
       <workItem from="1731171704494" duration="21935000" />
       <workItem from="1731231578141" duration="44091000" />
-      <workItem from="1731321771918" duration="297000" />
+      <workItem from="1731321771918" duration="2321000" />
     </task>
     <task id="LOCAL-00001" summary="pierwszy commit">
       <option name="closed" value="true" />
@@ -194,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731278998692</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="poprawka interfejsów">
+      <option name="closed" value="true" />
+      <created>1731322187542</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731322187543</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +218,8 @@
     <MESSAGE value="Lepsze odbieranie i wysyłanie" />
     <MESSAGE value="kontrolery" />
     <MESSAGE value="kolejne ulepszenia dodawania" />
-    <option name="LAST_COMMIT_MESSAGE" value="kolejne ulepszenia dodawania" />
+    <MESSAGE value="poprawka interfejsów" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawka interfejsów" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -235,11 +240,6 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/Services/JSONService/JSONService.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Network/Server.java</url>
           <line>18</line>
           <option name="timeStamp" value="16" />
@@ -248,11 +248,6 @@
           <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
           <line>21</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Models/RequestData.java</url>
@@ -278,6 +273,16 @@
           <url>file://$PROJECT_DIR$/src/Network/ServerControllers/UserController.java</url>
           <line>17</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Network/ClientHandler.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Services/JSONService/JSONService.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/Services/JSONService/JSONService.java</url>

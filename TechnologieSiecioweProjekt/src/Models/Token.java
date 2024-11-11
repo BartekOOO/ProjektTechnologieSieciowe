@@ -19,7 +19,7 @@ public class Token implements IData {
     @Override
     public String ToJSONBody() {
         StringBuilder result = new StringBuilder("{"+ "\n");
-        result.append("\"token\":"+'"').append(this.Token).append('"'+","+ "\n");
+        result.append("\"token\":"+'"').append(this.Token).append('"'+""+ "\n");
         result.append("}");
         return result.toString();
     }

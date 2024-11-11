@@ -70,7 +70,9 @@ public class UserController {
                 try {
                     CheckLoginParams.put("@Password", Kodek.Encrypt(user.GetPassword()));
                 }catch (Exception ex){
-
+                    result.setCode(ResponseCode.BAD_REQUEST);
+                    result.setStatus("Błedne dane logowania");
+                    result.setJSONResponse(new EmptyData());
                 }
                 DataTable CheckUserExist = sqlService.ExecuteStoredProcedureWithResult("PROJEKT.UserExists",CheckLoginParams);
                 DataRow userRow = CheckUserExist.GetRows().get(0);
