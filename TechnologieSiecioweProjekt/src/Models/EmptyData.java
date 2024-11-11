@@ -23,18 +23,5 @@ public class EmptyData implements IData {
 
     }
 
-    @Override
-    public Dictionary<String, Object> GetDeleteParameters() {
-        return new Hashtable<>();
-    }
 
-    @Override
-    public Dictionary<String, Object> GetInsertParameters() {
-        return new Hashtable<>();
-    }
-
-    @Override
-    public Dictionary<String, Object> GetUpdateParameters() {
-        return new Hashtable<>();
-    }
 }

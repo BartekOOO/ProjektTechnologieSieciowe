@@ -9,7 +9,7 @@ import java.sql.Date;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class Message implements IData {
+public class Message implements IData, IInsertData {
     public int Id;
     public int ReceiverId;
     public int SenderId;
@@ -45,13 +45,4 @@ public class Message implements IData {
         return  result;
     }
 
-    @Override
-    public Dictionary<String, Object> GetDeleteParameters() {
-        return null;
-    }
-
-    @Override
-    public Dictionary<String, Object> GetUpdateParameters() {
-        return null;
-    }
 }

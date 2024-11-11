@@ -24,6 +24,10 @@ public class ResponseData {
         ClassName =JSONResponse.GetClassName();
     }
 
+    public void SetCLassName(String ClassName){
+        this.ClassName = ClassName;
+    }
+
     public void ReadDataFromJSON(String data) {
         JSONService JSONBody = new JSONService(data);
 

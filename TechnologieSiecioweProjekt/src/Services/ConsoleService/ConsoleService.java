@@ -44,7 +44,9 @@ public class ConsoleService {
         User user = new User(0,userName,password,"");
         RequestData requestData = new RequestData(Method.LogIn,"",user);
         client.SendData(requestData);
+        System.out.println(client.GetResponseString());
 
+        Start();
     }
 
     public void Rejestracja(){
@@ -63,6 +65,8 @@ public class ConsoleService {
         client.SendData(requestData);
 
         System.out.println(client.GetResponseString());
+
+        Start();
 
     }
 
