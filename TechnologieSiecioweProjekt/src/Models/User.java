@@ -28,7 +28,7 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
         this.Password = row.getFieldValue("PUS_Password");
     }
 
-    public String getUserName() {
+    public String GetUserName() {
         return UserName;
     }
 
@@ -39,8 +39,13 @@ public class User implements IUpdateData, IInsertData, IDeleteData, IData {
         SetPassword(Password);
     }
 
+    public int GetId() {
+        return Id;
+    }
 
-
+    public void SetId(int id) {
+        Id = id;
+    }
 
     public void SetPassword(String password){
         try {

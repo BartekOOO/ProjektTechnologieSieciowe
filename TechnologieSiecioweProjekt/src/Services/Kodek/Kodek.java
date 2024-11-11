@@ -3,6 +3,8 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.Base64;
 public class Kodek {
     private static String Key = "WANDUIEWBLWDRFKUWODFKWOD";
@@ -27,6 +29,22 @@ public class Kodek {
         byte[] decryptedText = cipher.doFinal(decodedText);
 
         return new String(decryptedText);
+    }
+
+
+    public static String GenerateUserToken(String UserId,String userName, LocalDateTime data){
+        String result = ";Token:";
+
+        result = result + UserId + ";";
+        result = result + userName + ";";
+        result = result + data + ";";
+        try {
+            result = Encrypt(result);
+            result = Encrypt(result);
+        }catch (Exception ex){
+
+        }
+        return result;
     }
 
 }

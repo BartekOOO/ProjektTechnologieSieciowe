@@ -6,6 +6,7 @@ import Services.SQLService.DataRow;
 import Services.SQLService.DataTable;
 import Services.SQLService.SQLService;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class UserController {
@@ -20,18 +21,17 @@ public class UserController {
                 parameters = user.GetInsertParameters();
                 Dictionary<String, Object> CheckParams = new Hashtable<>();
 
-                CheckParams.put("@UserName",user.getUserName());
+                CheckParams.put("@UserName",user.GetUserName());
                 DataTable CheckUser = sqlService.ExecuteStoredProcedureWithResult("PROJEKT.UserExists",CheckParams);
-                DataRow row = CheckUser.GetRows().get(0);
 
-                if((Integer) row.getFieldValue("Liczba")>=1) {
+                if(CheckUser.GetRows().size()>0) {
                     result.setCode(ResponseCode.FORBIDDEN);
                     result.setStatus("Uzytkownik już istnieje");
                     result.setJSONResponse(new EmptyData());
                     return result;
                 }
 
-                if(user.getUserName().isEmpty()){
+                if(user.GetUserName().isEmpty()){
                     result.setCode(ResponseCode.FORBIDDEN);
                     result.setStatus("Nie podano nazwy użytkownika");
                     result.setJSONResponse(new EmptyData());
@@ -66,7 +66,7 @@ public class UserController {
             case Method.LogIn:
                 Date data = new Date();
                 Dictionary<String,Object> CheckLoginParams = new Hashtable<>();
-                CheckLoginParams.put("@UserName",user.getUserName());
+                CheckLoginParams.put("@UserName",user.GetUserName());
                 try {
                     CheckLoginParams.put("@Password", Kodek.Encrypt(user.GetPassword()));
                 }catch (Exception ex){
@@ -75,16 +75,16 @@ public class UserController {
                     result.setJSONResponse(new EmptyData());
                 }
                 DataTable CheckUserExist = sqlService.ExecuteStoredProcedureWithResult("PROJEKT.UserExists",CheckLoginParams);
-                DataRow userRow = CheckUserExist.GetRows().get(0);
 
-                if((Integer)userRow.getFieldValue("Liczba")==0){
+                if(CheckUserExist.GetRows().isEmpty()){
                     result.setCode(ResponseCode.BAD_REQUEST);
                     result.setStatus("Błedne dane logowania");
                     result.setJSONResponse(new EmptyData());
                 }
                 else{
-                    Token token = new Token();
-                    token.SetToken(";Token;"+user.getUserName()+";"+data+";");
+                    DataRow userRow = CheckUserExist.GetRows().get(0);
+                    user.SetId(userRow.getFieldValue("PUS_Id"));
+                    Token token = new Token(user.GetId(),user.GetUserName(),LocalDateTime.now());
                     result.setCode(ResponseCode.OK);
                     result.setStatus("Udało sie zalogowac");
                     result.setJSONResponse(token);
